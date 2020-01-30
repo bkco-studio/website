@@ -11,7 +11,7 @@ const GET_IMAGES = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 140) {
+            fluid(maxWidth: 140, maxHeight: 140) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
@@ -72,10 +72,12 @@ const GalleryWrapper = styled.div`
   @media (min-width: 1000px) {
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 1rem;
-    grid-column-gap: 1.5rem;
+    /* grid-column-gap: 1.5rem; */
   }
   .item {
     border-radius: 5px;
+    max-width: 140px;
+    max-height: 140px;
   }
 `
 
