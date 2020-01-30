@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { styles } from "../utils"
-import Navbar from "../components/globals/navbar"
 
 export default function HomeHeader() {
   return (
