@@ -45,7 +45,7 @@ export default function OurTeam() {
                 Are you a highly skilled creative looking to join our network of
                 talent?
               </p>
-              <p class="email-link">Drop us a message.</p>
+              <p className="email-link">Drop us a message.</p>
             </TeamTextWraper>
           </Section>
         )
