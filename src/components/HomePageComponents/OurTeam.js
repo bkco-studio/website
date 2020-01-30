@@ -34,12 +34,19 @@ export default function OurTeam() {
             <GalleryWrapper>
               {images.map(({ node }, index) => {
                 return (
-                  <div key={index} className="item">
-                    <Img fluid={node.childImageSharp.fluid} />
+                  <div key={index}>
+                    <Img fluid={node.childImageSharp.fluid} className="item" />
                   </div>
                 )
               })}
             </GalleryWrapper>
+            <TeamTextWraper>
+              <p>
+                Are you a highly skilled creative looking to join our network of
+                talent?
+              </p>
+              <p class="email-link">Drop us a message.</p>
+            </TeamTextWraper>
           </Section>
         )
       }}
@@ -66,5 +73,18 @@ const GalleryWrapper = styled.div`
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 1rem;
     grid-column-gap: 1.5rem;
+  }
+  .item {
+    border-radius: 5px;
+  }
+`
+
+const TeamTextWraper = styled.div`
+  line-height: 2rem;
+  margin-top: 3.2rem;
+  text-transform: uppercase;
+  font-size: 18px;
+  .email-link {
+    text-decoration: underline;
   }
 `
