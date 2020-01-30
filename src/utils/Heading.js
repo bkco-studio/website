@@ -15,4 +15,5 @@ const HeadingWrapper = styled.div`
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 1.5rem;
 `
