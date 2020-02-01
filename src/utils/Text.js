@@ -14,4 +14,5 @@ const TextWrapper = styled.div`
   color: ${styles.colors.mainGrey};
   font-size: 18px;
   line-height: 1.67;
+  margin-bottom: 1rem;
 `

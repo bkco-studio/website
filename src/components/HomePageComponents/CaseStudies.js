@@ -17,7 +17,7 @@ export default function WhatWeDo() {
           className="text-content"
           text="Ready to chat about your next project?"
         ></Text>
-        <p className="text-content">Ready to chat about your next project?</p>
+        {/* <p className="text-content">Ready to chat about your next project?</p> */}
         <Button className="what-we-do-button">Get in touch</Button>
       </CallToActionWrapper>
     </Section>
