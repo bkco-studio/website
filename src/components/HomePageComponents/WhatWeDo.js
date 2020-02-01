@@ -1,6 +1,5 @@
 import React from "react"
-import styled from "styled-components"
-import { styles, Section, Heading, Text } from "../../utils"
+import { Section, Heading, Text } from "../../utils"
 
 export default function WhatWeDo() {
   return (
@@ -16,5 +15,3 @@ export default function WhatWeDo() {
     </Section>
   )
 }
-
-//

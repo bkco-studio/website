@@ -6,6 +6,7 @@ import HomeHeader from "../utils/Header"
 import OurTeam from "../components/HomePageComponents/OurTeam"
 import WhatWeDo from "../components/HomePageComponents/WhatWeDo"
 import WhoWeAre from "../components/HomePageComponents/WhoWeAre"
+import CaseStudies from "../components/HomePageComponents/CaseStudies"
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <WhatWeDo />
     <WhoWeAre />
     <OurTeam />
+    <CaseStudies />
   </Layout>
 )
 
