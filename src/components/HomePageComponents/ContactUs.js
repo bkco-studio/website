@@ -12,7 +12,7 @@ const ContactUs = () => {
         <Heading heading="Let's chat" />
         <Text text="Whether you’re in the early planning phase of a project or ready to get started right away, get in touch and we can help walk you through the process." />
         <Text text="Our engagements are billed on a per-project basis. Meaning when we fully understand the scope of your project, we will give you a flat cost for the entire project. This means no budget overruns or surprises through the duration of the project. Our minimum engagements start at $25,000." />
-        <form>
+        <form method="post" action="https://formspree.io/robgmerrill@gmail.com">
           <div class="formgrid">
             <div className="input-box">
               <label for="name">
@@ -46,7 +46,7 @@ const ContactUs = () => {
                 <br />
                 <select
                   id="start"
-                  name="project-start"
+                  name="project start date"
                   required
                   className="form-item__element--select"
                 >
@@ -70,7 +70,7 @@ const ContactUs = () => {
                 <br />
                 <select
                   id="budget"
-                  name="project-budget"
+                  name="project budget"
                   className="form-item__element--select"
                   required
                 >
@@ -91,7 +91,7 @@ const ContactUs = () => {
                 <textarea
                   id="tell-us"
                   type="text"
-                  name="company"
+                  name="more info"
                   placeholder="Acme, Inc."
                 ></textarea>
               </label>
