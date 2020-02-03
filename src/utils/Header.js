@@ -28,6 +28,8 @@ const IndexHeader = styled.header`
     max-width: 750px;
 
     padding-left: 31px;
+    font-family: "Noto Serif SC", serif;
+    /* font-family: "Nunito", sans-serif; */
   }
   @media (min-width: 768px) {
     h2 {
