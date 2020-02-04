@@ -7,17 +7,16 @@ export default function WhatWeDo() {
     <Section>
       <Heading heading="Case studies"></Heading>
       <CaseImageWrapper>
-        <div class="case-study">content</div>
-        <div class="case-study">content</div>
-        <div class="case-study">content</div>
-        <div class="case-study">content</div>
+        <div className="case-study">image content</div>
+        <div className="case-study">image content</div>
+        <div className="case-study">image content</div>
+        <div className="case-study">image content</div>
       </CaseImageWrapper>
       <CallToActionWrapper>
         <Text
           className="text-content"
           text="Ready to chat about your next project?"
         ></Text>
-        {/* <p className="text-content">Ready to chat about your next project?</p> */}
         <Button className="what-we-do-button">Get in touch</Button>
       </CallToActionWrapper>
     </Section>
@@ -33,8 +32,8 @@ const CaseImageWrapper = styled.div`
   text-align: center;
   .case-study {
     width: 100%;
-    height: 460px;
-    width: 460px;
+    height: 440px;
+    width: 440px;
     background-color: ${styles.colors.mainGrey};
     border-radius: 5px;
   }
