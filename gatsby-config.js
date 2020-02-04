@@ -13,19 +13,26 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Noto Serif SC`,
+    //         variants: [`serif`],
+    //       },
+    //       {
+    //         family: `Nunito`,
+    //         subsets: [`sans-serif`],
+    //       },
+    //     ],
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Noto Serif SC`,
-            variants: [`serif`],
-          },
-          {
-            family: `Nunito`,
-            subsets: [`sans-serif`],
-          },
-        ],
+        fonts: [`Noto Serif SC`],
+        display: "swap",
       },
     },
     `gatsby-transformer-sharp`,

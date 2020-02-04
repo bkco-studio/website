@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { Heading, Text, styles } from "../../utils"
+import { Heading, Text, styles, Section } from "../../utils"
 // import Title from "../Title"
 // import styles from "../../css/contact.module.css"
 const ContactUs = () => {
   return (
-    <section>
+    <Section>
       {/* <Title title="contact" subtitle="us" /> */}
 
       <FormWrapper>
@@ -13,88 +13,79 @@ const ContactUs = () => {
         <Text text="Whether you’re in the early planning phase of a project or ready to get started right away, get in touch and we can help walk you through the process." />
         <Text text="Our engagements are billed on a per-project basis. Meaning when we fully understand the scope of your project, we will give you a flat cost for the entire project. This means no budget overruns or surprises through the duration of the project. Our minimum engagements start at $25,000." />
         <form method="post" action="https://formspree.io/robgmerrill@gmail.com">
-          <div class="formgrid">
+          <div className="formgrid">
             <div className="input-box">
-              <label for="name">
-                Your Name
-                <br />
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="john smith"
-                />
-              </label>
+              <label htmlFor="name">Your Name</label>
+              <br />
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="john smith"
+              />
             </div>
             <div className="input-box">
-              <label for="company">
-                Company
-                <br />
-                <input
-                  id="company"
-                  type="text"
-                  name="company"
-                  placeholder="Acme, Inc."
-                />
-              </label>
+              <label htmlFor="company">Company</label>
+              <br />
+              <input
+                id="company"
+                type="text"
+                name="company"
+                placeholder="Acme, Inc."
+              />
             </div>
 
             <div className="input-box">
-              <label for="start">
+              <label htmlFor="start">
                 <span>Start Date:</span>
-
-                <br />
-                <select
-                  id="start"
-                  name="project start date"
-                  required
-                  className="form-item__element--select"
-                >
-                  <option disabled selected="selected" hidden value="">
-                    As soon as possible
-                  </option>
-                  <option value="As soon as possible">
-                    As soon as possible
-                  </option>
-                  <option value="30 days">Next 30 days</option>
-                  <option value="3 months">Next 3 months</option>
-                  <option value="Not sure">Not sure</option>
-                </select>
               </label>
+
+              <br />
+              <select
+                id="start"
+                name="project start date"
+                required
+                className="form-item__element--select"
+              >
+                <option disabled selected="selected" hidden value="">
+                  As soon as possible
+                </option>
+                <option value="As soon as possible">As soon as possible</option>
+                <option value="30 days">Next 30 days</option>
+                <option value="3 months">Next 3 months</option>
+                <option value="Not sure">Not sure</option>
+              </select>
             </div>
 
             <div className="input-box">
-              <label for="budget">
+              <label htmlFor="budget">
                 <span>Project Budget:</span>
-
-                <br />
-                <select
-                  id="budget"
-                  name="project budget"
-                  className="form-item__element--select"
-                  required
-                >
-                  <option disabled selected="selected" hidden value="">
-                    ~$50,000
-                  </option>
-                  <option value="50000">~$50,000</option>
-                  <option value="10000">~$10,000</option>
-                  <option value="25000">~$25,000</option>
-                  <option value="100000">~$100,000</option>
-                </select>
               </label>
+              <br />
+              <select
+                id="budget"
+                name="project budget"
+                className="form-item__element--select"
+                required
+              >
+                <option disabled selected="selected" hidden value="">
+                  ~$50,000
+                </option>
+                <option value="50000">~$50,000</option>
+                <option value="10000">~$10,000</option>
+                <option value="25000">~$25,000</option>
+                <option value="100000">~$100,000</option>
+              </select>
             </div>
             <div className="input-box">
-              <label for="tell-us">
-                Tell us a bit about the project
-                <br />
-                <textarea
-                  id="tell-us"
-                  type="text"
-                  name="more info"
-                  placeholder="Acme, Inc."
-                ></textarea>
-              </label>
+              <label htmlFor="tell-us">Tell us a bit about the project</label>
+              <br />
+              <textarea
+                id="tell-us"
+                type="text"
+                name="more info"
+                placeholder="Acme, Inc."
+              ></textarea>
             </div>
             <br />
             <div className="submit-container">
@@ -104,7 +95,7 @@ const ContactUs = () => {
           </div>
         </form>
       </FormWrapper>
-    </section>
+    </Section>
   )
 }
 
