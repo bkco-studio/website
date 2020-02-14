@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
         <div>
           <a href="#">Newsletter Signup Form</a>
-          <a href="#">&copy; 2018-{new Date().getFullYear()} BKCO, LLC</a>
+          <div>&copy; 2018-{new Date().getFullYear()} BKCO, LLC</div>
         </div>
       </FooterWrapper>
     </Section>
@@ -49,7 +49,7 @@ const FooterWrapper = styled.div`
   a {
     text-decoration: none;
     display: block;
-    padding-bottom: 18px;
+    margin-bottom: 18px;
     cursor: pointer;
     color: inherit;
   }
