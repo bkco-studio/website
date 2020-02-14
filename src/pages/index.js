@@ -9,12 +9,14 @@ import WhoWeAre from "../components/HomePageComponents/WhoWeAre"
 import CaseStudies from "../components/HomePageComponents/CaseStudies"
 import ContactUs from "../components/HomePageComponents/ContactUs"
 import Testimonials from "../components/HomePageComponents/Testimonials"
+import Specialization from "../components/HomePageComponents/Specialization"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <HomeHeader />
     <WhatWeDo />
+    <Specialization />
     <WhoWeAre />
     <OurTeam />
     <CaseStudies />
