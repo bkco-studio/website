@@ -3,7 +3,8 @@ import { styles } from "../utils"
 
 export const Section = styled.section`
   padding: 2rem 0;
-  padding: 42px;
+  /* padding: 42px; */
   margin: 0 auto;
   background-color: ${styles.colors.mainWhite};
+  max-width: 1000px;
 `

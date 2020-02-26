@@ -26,7 +26,7 @@ body {
   color: #262626;
   background: #fff;
   padding: 11px 12px;
-  max-width: 1000px;
+  /* max-width: 1000px; */
 }
 `
 

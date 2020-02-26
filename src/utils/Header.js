@@ -19,6 +19,8 @@ const IndexHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 
   h2 {
     color: ${styles.colors.mainWhite};

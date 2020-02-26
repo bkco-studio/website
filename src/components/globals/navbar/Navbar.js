@@ -25,4 +25,6 @@ export default class Navbar extends Component {
 
 const NavWrapper = styled.nav`
   background-color: #343731;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 `
