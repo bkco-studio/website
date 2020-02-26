@@ -1,21 +1,24 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import { Section } from "../utils"
 // import SEO from "../components/seo";
 const CaseStudy = ({ data }) => {
   console.warn("template -> casestudy.js: ", data)
   const { title, body, image } = data.contentfulCaseStudy
   return (
     <Layout>
-      {/* <SEO title={title} /> */}
-      <div className="blogpost">
-        <h1>{title}</h1>
-        <img alt={title} src={image.file.url} />
+      <Section>
+        {/* <SEO title={title} /> */}
+        <div className="blogpost">
+          <h1>{title}</h1>
+          <img alt={title} src={image.file.url} />
 
-        <p className="body-text">{body.body}</p>
-        <Link to="/casestudy">View more posts</Link>
-        <Link to="/">Back to Home</Link>
-      </div>
+          <p className="body-text">{body.body}</p>
+          <Link to="/casestudy">View more posts</Link>
+          <Link to="/">Back to Home</Link>
+        </div>
+      </Section>
     </Layout>
   )
 }
