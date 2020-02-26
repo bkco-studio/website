@@ -27,7 +27,6 @@ export default function OurTeam() {
       query={GET_IMAGES}
       render={data => {
         const images = data.getImages.edges
-        console.log(images)
         return (
           <Section>
             <Heading heading="Our team" />

@@ -22,7 +22,6 @@ export default function WhoWeAre() {
       query={Banner_Image}
       render={data => {
         const img1 = data.img1.childImageSharp.fluid
-        console.log(img1)
         return (
           <Section>
             <Heading heading="Who we are"></Heading>

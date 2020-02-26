@@ -6,13 +6,10 @@ import HomeHeader from "../utils/Header"
 import OurTeam from "../components/HomePageComponents/OurTeam"
 import WhatWeDo from "../components/HomePageComponents/WhatWeDo"
 import WhoWeAre from "../components/HomePageComponents/WhoWeAre"
-// import CaseStudies from "../components/HomePageComponents/CaseStudies"
-import CaseStudiesNew from "../components/HomePageComponents/CaseStudiesNew"
 import ContactUs from "../components/HomePageComponents/ContactUs"
 import Testimonials from "../components/HomePageComponents/Testimonials"
 import Specialization from "../components/HomePageComponents/Specialization"
-import { Heading, Section } from "../utils"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 const IndexPage = ({ data }) => {
   console.warn("DDDAAAATAAA", data)
@@ -24,9 +21,7 @@ const IndexPage = ({ data }) => {
       <Specialization />
       <WhoWeAre />
       <OurTeam />
-      {/* <CaseStudies /> */}
-      <CaseStudiesNew />
-
+      <Link to="/casestudies">View All Case Studies</Link>
       <Testimonials />
       <ContactUs />
     </Layout>
