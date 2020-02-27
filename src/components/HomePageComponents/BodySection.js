@@ -1,0 +1,18 @@
+import React from "react"
+import { Section, Heading, Text } from "../../utils"
+import styled from "styled-components"
+
+export default function WhatWeDo({ heading, text }) {
+  return (
+    <Section>
+      <BodySectionWrapper>
+        <Heading heading={heading}></Heading>
+        <Text text={text}></Text>
+      </BodySectionWrapper>
+    </Section>
+  )
+}
+
+const BodySectionWrapper = styled.div`
+  max-width: 700px;
+`
