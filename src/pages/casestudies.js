@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 const CaseStudies = ({ data }) => {
-  console.log("pages -> casestudies.js", data)
   const caseStudies = data.allContentfulCaseStudy.edges
   return (
     <Layout>
@@ -13,7 +12,7 @@ const CaseStudies = ({ data }) => {
         {caseStudies.map(({ node }) => (
           <div key={node.id}>
             <Link to={`/casestudy/${node.slug}`}>{node.title}</Link>
-            <img src={node.image.file.url} alt="case study image" />
+            <img src={node.image.file.url} alt="" />
           </div>
         ))}
         <span className="mgBtm__24" />

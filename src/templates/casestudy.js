@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import { Section } from "../utils"
 // import SEO from "../components/seo";
 const CaseStudy = ({ data }) => {
-  console.warn("template -> casestudy.js: ", data)
   const { title, body, image } = data.contentfulCaseStudy
   return (
     <Layout>

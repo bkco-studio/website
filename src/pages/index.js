@@ -9,11 +9,9 @@ import WhoWeAre from "../components/HomePageComponents/WhoWeAre"
 import ContactUs from "../components/HomePageComponents/ContactUs"
 import Testimonials from "../components/HomePageComponents/Testimonials"
 import Specialization from "../components/HomePageComponents/Specialization"
-import { Link } from "gatsby"
 import CaseStudyNewest from "../components/HomePageComponents/CaseStudyNewest"
 
 const IndexPage = ({ data }) => {
-  console.warn("Give me that knu data", data)
   return (
     <Layout>
       <SEO title="Home" />
@@ -23,7 +21,6 @@ const IndexPage = ({ data }) => {
       <WhoWeAre />
       <OurTeam />
       <CaseStudyNewest />
-      {/* <Link to="/casestudies">View All Case Studies</Link> */}
       <Testimonials />
       <ContactUs />
     </Layout>

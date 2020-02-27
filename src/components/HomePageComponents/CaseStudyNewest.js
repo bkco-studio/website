@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 
 import { StaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
@@ -29,7 +29,6 @@ export default () => (
       }
     `}
     render={data => {
-      console.log("PLEEEEESE: ", data)
       const caseStudies = data.allContentfulCaseStudy.edges
       return (
         <Section>
@@ -38,7 +37,7 @@ export default () => (
               {caseStudies.map(({ node }) => (
                 <div key={node.id}>
                   <Link to={`/casestudy/${node.slug}`}>{node.title}</Link>
-                  <img src={node.image.file.url} alt="case study image" />
+                  <img src={node.image.file.url} alt="" />
                   <div>{node.body.body}</div>
                 </div>
               ))}

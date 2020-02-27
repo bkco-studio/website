@@ -9,7 +9,7 @@ export default function Footer() {
     <Section>
       <FooterWrapper>
         <div>
-          <img src={logo}></img>
+          <img src={logo} alt=""></img>
         </div>
         <div>
           <Link to="/">Home</Link>

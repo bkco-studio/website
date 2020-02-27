@@ -5,10 +5,7 @@ import { styles } from "../utils"
 export default function HomeHeader() {
   return (
     <IndexHeader>
-      <h2>
-        Accelerating brand growth through simple and delightful user
-        experiences.
-      </h2>
+      <h2>We design & build software experiences with conviction.</h2>
     </IndexHeader>
   )
 }

@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import { Section } from "../../utils"
 import styled from "styled-components"
-// import { StaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
 export default class Testimonials extends Component {
   state = {
