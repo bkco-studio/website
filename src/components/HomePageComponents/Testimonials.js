@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Section } from "../../utils"
+import { Section, Heading, Text } from "../../utils"
 import styled from "styled-components"
 
 export default class Testimonials extends Component {
@@ -35,16 +35,24 @@ export default class Testimonials extends Component {
     return (
       <Section>
         <TestimonialWrapper>
+          <div className="testimony-header">
+            <Heading heading="Built on trust and communication." />
+            <Text text="The partnerships with our clients are our number one priority. We value honest and open communication becauses it leads to a better end result. Here are some nice things some past clients have said about working with us:" />
+          </div>
           {this.state.testimonials.map(testimonial => {
             return (
               <div className="testimonial-wrapper" key={testimonial.id}>
-                <div>
+                <blockquote>
+                  <p className="testimonial-text">{testimonial.text}</p>
+                </blockquote>
+                <div className="testimonial-detail">
                   {/* <Img fluid={GET_IMAGE.img1.childImageSharp.fluid} /> */}
                   <div className="testimony-avatar"></div>
-                  <div className="testimony-name">{testimonial.name}</div>
-                  <div className="testimony-title">{testimonial.title}</div>
+                  <div>
+                    <div className="testimony-name">{testimonial.name}</div>
+                    <div className="testimony-title">{testimonial.title}</div>
+                  </div>
                 </div>
-                <div className="testimonial-text">{testimonial.text}</div>
               </div>
             )
           })}
@@ -57,31 +65,57 @@ export default class Testimonials extends Component {
 const TestimonialWrapper = styled.div`
   .testimonial-wrapper {
     /* font-size: 72px; */
-    display: grid;
-    grid-template-columns: 100px 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 100px 1fr; */
     padding-bottom: 3rem;
-    grid-column-gap: 250px;
+    /* grid-column-gap: 250px; */
   }
   .testimony-avatar {
     height: 62px;
     width: 62px;
     background-color: blue;
     border-radius: 50%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5em;
+    margin-right: 1.5em;
     /* margin: 0 auto; */
   }
   .testimony-name {
-    /* text-align: center; */
     margin-bottom: 0.75rem;
   }
   .testimony-title {
     /* text-align: center; */
   }
   .testimonial-text {
-    /* font-size: 48px; */
-    padding-left: 20px;
-    border-left: 1px solid black;
     line-height: 1.67;
+    margin-bottom: 2em;
+  }
+
+  .testimony-header {
+    background-color: #f8f8f8;
+    padding: 2em 0;
+    margin-bottom: 1em;
+  }
+  .testimonial-detail {
+    display: flex;
+  }
+  blockquote {
+    /* background: #f9f9f9; */
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+  }
+
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  blockquote p {
+    /* font-size: 74px; */
   }
 `
 
