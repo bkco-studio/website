@@ -2,7 +2,8 @@ import React from "react"
 import { Section, Heading, Text } from "../../utils"
 import styled from "styled-components"
 
-export default function WhatWeDo({ heading, text }) {
+export default function WhatWeDo({ heading, text, color }) {
+  console.log(color)
   return (
     <Section>
       <BodySectionWrapper>
@@ -14,5 +15,5 @@ export default function WhatWeDo({ heading, text }) {
 }
 
 const BodySectionWrapper = styled.div`
-  max-width: 700px;
+  width: 700px;
 `
