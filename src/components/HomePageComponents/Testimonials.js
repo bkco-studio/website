@@ -43,7 +43,10 @@ export default class Testimonials extends Component {
             return (
               <div className="testimonial-wrapper" key={testimonial.id}>
                 <blockquote>
-                  <p className="testimonial-text">{testimonial.text}</p>
+                  <p className="testimonial-text">
+                    <div className="testimonial-quote">&#34;</div>
+                    <div>{testimonial.text}</div>
+                  </p>
                 </blockquote>
                 <div className="testimonial-detail">
                   {/* <Img fluid={GET_IMAGE.img1.childImageSharp.fluid} /> */}
@@ -88,6 +91,8 @@ const TestimonialWrapper = styled.div`
   .testimonial-text {
     line-height: 1.67;
     margin-bottom: 2em;
+    /* display: grid; */
+    position: relative;
   }
 
   .testimony-header {
@@ -98,24 +103,15 @@ const TestimonialWrapper = styled.div`
   .testimonial-detail {
     display: flex;
   }
-  blockquote {
-    /* background: #f9f9f9; */
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-  }
-
-  blockquote:before {
-    color: #ccc;
-    content: open-quote;
+  .testimonial-quote {
     font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
-
-  blockquote p {
-    /* font-size: 74px; */
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    width: 31px;
+    height: 25px;
+    opacity: 0.3;
+    color: #343731;
   }
 `
 
