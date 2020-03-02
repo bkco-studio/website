@@ -113,6 +113,11 @@ const TestimonialWrapper = styled.div`
     opacity: 0.3;
     color: #343731;
   }
+  @media (max-width: 768px) {
+    .testimonial-wrapper {
+      padding-left: 15px;
+    }
+  }
 `
 
 export const GET_IMAGE = graphql`
