@@ -15,4 +15,12 @@ const TextWrapper = styled.div`
   font-size: 18px;
   line-height: 1.67;
   margin-bottom: 1rem;
+  .text {
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    .text {
+      font-size: 16px;
+    }
+  }
 `
