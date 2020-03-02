@@ -7,4 +7,8 @@ export const Section = styled.section`
   margin: 0 auto;
   background-color: ${styles.colors.mainWhite};
   max-width: 1000px;
+
+  @media (max-width: 768px) {
+    /* background-color: purple; */
+  }
 `

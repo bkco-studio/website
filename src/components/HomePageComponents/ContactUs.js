@@ -9,9 +9,11 @@ const ContactUs = () => {
       {/* <Title title="contact" subtitle="us" /> */}
 
       <FormWrapper>
-        <Heading heading="Let's chat" />
-        <Text text="Whether you’re in the early planning phase of a project or ready to get started right away, get in touch and we can help walk you through the process." />
-        <Text text="Our engagements are billed on a per-project basis. Meaning when we fully understand the scope of your project, we will give you a flat cost for the entire project. This means no budget overruns or surprises through the duration of the project. Our minimum engagements start at $25,000." />
+        <div className="header-text">
+          <Heading heading="Let's chat" />
+          <Text text="Whether you’re in the early planning phase of a project or ready to get started right away, get in touch and we can help walk you through the process." />
+          <Text text="Our engagements are billed on a per-project basis. Meaning when we fully understand the scope of your project, we will give you a flat cost for the entire project. This means no budget overruns or surprises through the duration of the project. Our minimum engagements start at $25,000." />
+        </div>
         <form method="post" action="https://formspree.io/robgmerrill@gmail.com">
           <div className="formgrid">
             <div className="input-box">
@@ -164,12 +166,17 @@ const FormWrapper = styled.div`
     }
     margin-right: 2rem;
   }
+
   @media (min-width: 768px) {
     .formgrid {
       display: grid;
       grid-template-columns: 380px 380px;
       grid-column-gap: 1rem;
     }
+  }
+  @media (max-width: 768px) {
+    display: hidden;
+    max-width: 700px;
   }
 `
 
