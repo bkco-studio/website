@@ -13,13 +13,14 @@ export default class NavbarHeader extends Component {
         <Link to="/">
           <img src={logo} alt="company name" className="logo" />
         </Link>
-        <MdMenu
-          className="toggle-icon"
+        <div
           onClick={() => {
             console.log("This was clicked successfully in local dev")
             handleNavbar()
           }}
-        ></MdMenu>
+        >
+          <MdMenu className="toggle-icon"></MdMenu>
+        </div>
       </HeaderWrapper>
     )
   }
