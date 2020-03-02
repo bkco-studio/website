@@ -18,5 +18,8 @@ const HeadingWrapper = styled.div`
   margin-bottom: 1.5rem;
   @media (max-width: 768px) {
     max-width: 700px;
+    h2 {
+      font-size: 22px;
+    }
   }
 `
