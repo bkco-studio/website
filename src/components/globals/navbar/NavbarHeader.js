@@ -16,6 +16,7 @@ export default class NavbarHeader extends Component {
         <MdMenu
           className="toggle-icon"
           onClick={() => {
+            console.log("This was clicked successfully in local dev")
             handleNavbar()
           }}
         ></MdMenu>
