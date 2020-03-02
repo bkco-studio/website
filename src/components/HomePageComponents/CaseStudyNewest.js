@@ -61,6 +61,7 @@ const CaseStudiesWrapper = styled.div`
     color: ${styles.colors.mainGrey};
     grid-template-columns: 1fr 1fr;
     .project-title {
+      margin-bottom: 7px;
       color: inherit;
       font-size: 1.5rem;
       padding-bottom: 7px;
@@ -70,12 +71,13 @@ const CaseStudiesWrapper = styled.div`
 
     .project-description {
       font-size: 1.12rem;
-      margin-bottom: 56px;
+      margin-bottom: 30px;
     }
-
+    .project-title, .project-description {
+      padding-left: 24px;
+    }
     .case-study {
       display: inline;
-      /* width: 48%; */
       img {
         max-width: 100%;
       }
@@ -88,6 +90,15 @@ const CaseStudiesWrapper = styled.div`
       img {
         max-width: 100%;
       }
+    }
+  }
+  @media (max-width: 768px) {
+    .case-study {
+      grid-column: 1 / 3;
+      img {
+        max-width: 100%;
+      }
+    }
     }
   }
 `
