@@ -44,7 +44,7 @@ export default class Testimonials extends Component {
               <div className="testimonial-wrapper" key={testimonial.id}>
                 <blockquote>
                   <p className="testimonial-text">
-                    <div className="testimonial-quote">&#34;</div>
+                    <div className="testimonial-quote">&ldquo;</div>
                     <div>{testimonial.text}</div>
                   </p>
                 </blockquote>
