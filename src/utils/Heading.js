@@ -16,4 +16,7 @@ const HeadingWrapper = styled.div`
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  @media (max-width: 768px) {
+    max-width: 700px;
+  }
 `

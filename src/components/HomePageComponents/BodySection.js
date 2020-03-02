@@ -15,5 +15,8 @@ export default function WhatWeDo({ heading, text, color }) {
 }
 
 const BodySectionWrapper = styled.div`
-  width: 700px;
+  max-width: 700px;
+  /* @media (max-width: 768px) {
+    max-width: 600px;
+  } */
 `
