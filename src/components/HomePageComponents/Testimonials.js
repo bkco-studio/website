@@ -108,8 +108,6 @@ const TestimonialWrapper = styled.div`
     position: absolute;
     left: -30px;
     top: -30px;
-    width: 31px;
-    height: 25px;
     opacity: 0.3;
     color: #343731;
   }
