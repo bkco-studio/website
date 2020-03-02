@@ -102,7 +102,7 @@ const ContactUs = () => {
 }
 
 const FormWrapper = styled.div`
-  width: 900px;
+  max-width: 900px;
   /* display: grid; */
   .formgrid {
     display: grid;
@@ -148,7 +148,7 @@ const FormWrapper = styled.div`
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    width: 800px;
+    max-width: 800px;
   }
   .submit-button {
     color: ${styles.colors.mainWhite};
