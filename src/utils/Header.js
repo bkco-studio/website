@@ -11,7 +11,7 @@ export default function HomeHeader() {
 }
 
 const IndexHeader = styled.header`
-  min-height: 621px;
+  height: 100vh;
   background-color: ${styles.colors.mainGrey};
   display: flex;
   justify-content: center;
@@ -28,11 +28,18 @@ const IndexHeader = styled.header`
 
     padding-left: 31px;
     font-family: "Noto Serif SC", serif;
+    border-left-style: solid;
+    border-left-width: 2px;
   }
-  @media (min-width: 768px) {
+  h2 {
+  }
+  /* } */
+  @media (max-width: 768px) {
+    max-height: 100vh;
     h2 {
-      border-left-style: solid;
-      border-left-width: 2px;
+      font-size: 27px;
+      margin-left: 25px;
+      padding-left: 20px;
     }
   }
 `

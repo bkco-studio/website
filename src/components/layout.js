@@ -28,6 +28,9 @@ body {
   padding: 11px 12px;
   /* max-width: 1000px; */
 }
+@media (max-width: 768px) {
+  max-width: 700px;
+}
 `
 
 Layout.propTypes = {
