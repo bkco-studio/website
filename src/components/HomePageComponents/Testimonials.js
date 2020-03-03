@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import { Section, Heading, Text } from "../../utils"
 import styled from "styled-components"
+import Pic1 from "../../images/testimonyGallery/62X62-1.png"
+import Pic2 from "../../images/testimonyGallery/62X62-2.png"
+import Pic3 from "../../images/testimonyGallery/62X62-3.png"
 
 export default class Testimonials extends Component {
   state = {
@@ -10,6 +13,7 @@ export default class Testimonials extends Component {
         image: "#",
         name: "Bill",
         title: "General Manager, Backsplash",
+        img: Pic1,
         text:
           "Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever h",
       },
@@ -18,6 +22,7 @@ export default class Testimonials extends Component {
         image: "#",
         name: "Jill",
         title: "CFO",
+        img: Pic2,
         text:
           "Best employee anyone has ever had. Period. Best employee anyone has ever had. Period. Best employee anyone has ever had. Period. Best employee anyone has ever had. Period. Best employee anyone has ever had. Period.",
       },
@@ -26,6 +31,7 @@ export default class Testimonials extends Component {
         image: "#",
         name: "Sarah",
         title: "CEO",
+        img: Pic3,
         text:
           "Destined to take over the company next. Best employee anyone has ever had. Period. Best employee anyone has ever had. Period. Best employee anyone has ever had. Period. Best employee anyone has ever had. Period. ",
       },
@@ -43,14 +49,16 @@ export default class Testimonials extends Component {
             return (
               <div className="testimonial-wrapper" key={testimonial.id}>
                 <blockquote>
-                  <p className="testimonial-text">
+                  <div className="testimonial-text">
                     <div className="testimonial-quote">&ldquo;</div>
                     <div>{testimonial.text}</div>
-                  </p>
+                  </div>
                 </blockquote>
                 <div className="testimonial-detail">
                   {/* <Img fluid={GET_IMAGE.img1.childImageSharp.fluid} /> */}
-                  <div className="testimony-avatar"></div>
+                  {/* <div className="testimony-avatar"></div> */}
+                  <img className="testimony-avatar" src={testimonial.img} />
+
                   <div>
                     <div className="testimony-name">{testimonial.name}</div>
                     <div className="testimony-title">{testimonial.title}</div>
