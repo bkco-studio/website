@@ -39,12 +39,15 @@ export default class Testimonials extends Component {
   }
   render() {
     return (
-      <Section>
-        <TestimonialWrapper>
-          <div className="testimony-header">
+      // <Section>
+      <TestimonialWrapper>
+        <div className="testimony-header">
+          <div className="testimony-header-text">
             <Heading heading="Built on trust and communication." />
             <Text text="The partnerships with our clients are our number one priority. We value honest and open communication becauses it leads to a better end result. Here are some nice things some past clients have said about working with us:" />
           </div>
+        </div>
+        <Section>
           {this.state.testimonials.map(testimonial => {
             return (
               <div className="testimonial-wrapper" key={testimonial.id}>
@@ -67,8 +70,9 @@ export default class Testimonials extends Component {
               </div>
             )
           })}
-        </TestimonialWrapper>
-      </Section>
+        </Section>
+      </TestimonialWrapper>
+      // </Section>
     )
   }
 }
@@ -108,6 +112,14 @@ const TestimonialWrapper = styled.div`
     padding: 2em 0;
     margin-bottom: 1em;
   }
+
+  .testimony-header-text {
+    padding: 2rem 0;
+    /* padding: 42px; */
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
   .testimonial-detail {
     display: flex;
   }
