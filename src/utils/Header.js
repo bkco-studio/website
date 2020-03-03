@@ -11,7 +11,7 @@ export default function HomeHeader() {
 }
 
 const IndexHeader = styled.header`
-  height: 100vh;
+  height: calc(100vh - 92px);
   background-color: ${styles.colors.mainGrey};
   display: flex;
   justify-content: center;
