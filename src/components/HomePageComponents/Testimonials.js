@@ -11,11 +11,11 @@ export default class Testimonials extends Component {
       {
         id: 1,
         image: "#",
-        name: "Bill",
+        name: "Ryan",
         title: "General Manager, Backsplash",
         img: Pic1,
         text:
-          "Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever had. Best employee anyone has ever h",
+          "Brian is someone I would always want on my team. He and I have worked together at different times for a total of about 6 years. As his manager throughout most of that time, I couldn't have asked for a better team member. He has a remarkable work ethic, gets the job done, strives for excellence and yet is very personable and easy to work with. He excels at implementing beautiful user experiences and most recently worked as a manager on my team; his direct reports loved him! He will truly be an inspiration to any team he joins both in terms of the positive attitude he brings, and the level of technical proficiency he offers.",
       },
       {
         id: 2,
@@ -54,7 +54,7 @@ export default class Testimonials extends Component {
                 <blockquote>
                   <div className="testimonial-text">
                     <div className="testimonial-quote">&ldquo;</div>
-                    <div>{testimonial.text}</div>
+                    <div>{testimonial.text}"</div>
                   </div>
                 </blockquote>
                 <div className="testimonial-detail">
