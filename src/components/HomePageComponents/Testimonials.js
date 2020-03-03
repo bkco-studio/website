@@ -105,6 +105,7 @@ const TestimonialWrapper = styled.div`
     margin-bottom: 2em;
     /* display: grid; */
     position: relative;
+    font-family: "Noto Serif SC", serif;
   }
 
   .testimony-header {
@@ -115,7 +116,6 @@ const TestimonialWrapper = styled.div`
 
   .testimony-header-text {
     padding: 2rem 0;
-    /* padding: 42px; */
     margin: 0 auto;
     max-width: 1000px;
   }
@@ -126,7 +126,7 @@ const TestimonialWrapper = styled.div`
   .testimonial-quote {
     font-size: 4em;
     position: absolute;
-    left: -30px;
+    left: -60px;
     top: -30px;
     opacity: 0.3;
     color: #343731;

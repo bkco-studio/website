@@ -15,6 +15,7 @@ const TextWrapper = styled.div`
   font-size: 18px;
   line-height: 1.67;
   margin-bottom: 1rem;
+  font-family: "Noto Serif SC", serif;
   .text {
     font-size: 16px;
   }
