@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { styles } from "../utils"
 
 export default function HomeHeader() {
   return (
@@ -12,7 +11,7 @@ export default function HomeHeader() {
 
 const IndexHeader = styled.header`
   height: calc(100vh - 92px);
-  background-color: ${styles.colors.mainGrey};
+  background-color: #343731;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +19,7 @@ const IndexHeader = styled.header`
   border-bottom-right-radius: 5px;
 
   h2 {
-    color: ${styles.colors.mainWhite};
+    color: #fff;
     font-size: 36px;
     padding: 1rem;
     line-height: 1.33;
@@ -33,7 +32,6 @@ const IndexHeader = styled.header`
   }
   h2 {
   }
-  /* } */
   @media (max-width: 768px) {
     max-height: 100vh;
     h2 {
