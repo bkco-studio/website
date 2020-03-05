@@ -49,7 +49,9 @@ const GalleryWrapper = styled.div`
   grid-template-columns: 220px 380px 220px 380px 220px 380px 220px 380px;
   grid-column-gap: 20px;
   padding-left: 42px;
-  overflow: hidden;
+  overflow-x: scroll;
+  width: auto;
+
   .item {
     border-radius: 5px;
     height: 100%;
