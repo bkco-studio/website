@@ -14,7 +14,6 @@ const HeadingWrapper = styled.div`
   color: ${styles.colors.mainGrey};
   font-size: 18px;
   font-weight: bold;
-  text-transform: uppercase;
   margin-bottom: 1.5rem;
   font-family: "Roboto", sans-serif;
   @media (max-width: 768px) {
