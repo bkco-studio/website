@@ -33,7 +33,11 @@ export default class NavbarLinks extends Component {
         {this.state.links.map(link => {
           return (
             <li key={link.id}>
-              <a href={link.path} className="nav-link">
+              <a
+                href={link.path}
+                className="nav-link"
+                style={{ color: this.props.color }}
+              >
                 {link.name}
               </a>
             </li>
@@ -56,7 +60,7 @@ const LinkWrapper = styled.ul`
     font-weight: 700;
     text-transform: capitalize;
     cursor: pointer;
-    color: ${styles.colors.mainWhite};
+    /* color: ${styles.colors.mainWhite}; */
     display: flex;
     height: auto;
     margin: 0 auto;

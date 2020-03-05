@@ -10,7 +10,7 @@ import BodySection from "../components/HomePageComponents/BodySection"
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
+    <Layout homepage={true}>
       <SEO title="Home" />
       <HomeHeader />
       <BodySection

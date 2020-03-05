@@ -4,11 +4,11 @@ import { createGlobalStyle } from "styled-components"
 import Navbar from "../components/globals/navbar/Navbar"
 import Footer from "../components/globals/Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, homepage }) => {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Navbar />
+      <Navbar homepage={homepage} />
       {children}
       <Footer />
     </React.Fragment>
