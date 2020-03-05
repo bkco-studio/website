@@ -126,7 +126,7 @@ const TestimonialWrapper = styled.div`
   .testimonial-quote {
     font-size: 4em;
     position: absolute;
-    left: -60px;
+    left: -30px;
     top: -30px;
     opacity: 0.3;
     color: #343731;
