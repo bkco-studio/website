@@ -21,6 +21,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-smoothscroll`,
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {

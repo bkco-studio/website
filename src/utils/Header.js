@@ -1,15 +1,22 @@
 import React from "react"
 import styled from "styled-components"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 export default function HomeHeader() {
   return (
     <IndexHeader>
       <h2>We design & build software experiences with conviction.</h2>
+      <section class="demo">
+        <a onClick={() => scrollTo("#imageGallery")}>
+          <span></span>Scroll
+        </a>
+      </section>
     </IndexHeader>
   )
 }
 
 const IndexHeader = styled.header`
+  position: relative;
   height: calc(100vh - 92px);
   background-color: #343731;
   display: flex;
@@ -32,6 +39,20 @@ const IndexHeader = styled.header`
   }
   h2 {
   }
+  a span {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 24px;
+    height: 24px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
     max-height: 100vh;
     h2 {

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
-import { Section } from "../../utils"
+import BodySection from "../HomePageComponents/BodySection"
 import Img from "gatsby-image"
 
 const GET_IMAGES = graphql`
@@ -27,7 +27,11 @@ export default function ImageGallery() {
       render={data => {
         const images = data.getImages.edges
         return (
-          <div>
+          <div id="imageGallery">
+            <BodySection
+              heading="We aren’t your typical development shop."
+              text="We focus on business outcomes rather than features to build. Come to us with a problem, and we will come back with a plan on how to solve it. Whether you are looking to grow engagement, launch a product, or aquire your first 100 customers, our team has the experience under our belts to get it done."
+            />
             <GalleryWrapper>
               {images.map(({ node }, index) => {
                 return (
