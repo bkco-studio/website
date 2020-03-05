@@ -3,9 +3,13 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Section, Heading, Text, styles } from "../utils"
 import styled from "styled-components"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const CaseStudy = ({ data }) => {
-  const { title, body, image } = data.contentfulCaseStudy
+  const { title, body, image, wysiwyg } = data.contentfulCaseStudy
+  console.log("data.contentfulCaseStudy: ", wysiwyg)
+  const renderWysiwyg = () => <>{documentToReactComponents(wysiwyg.json)}</>
+
   return (
     <Layout homepage={false}>
       <Section>
@@ -14,6 +18,7 @@ const CaseStudy = ({ data }) => {
             <img alt={title} src={image.file.url} />
             <h1>{title}</h1>
             <p className="body-text">{body.body}</p>
+            <div>{renderWysiwyg()}</div>
           </div>
           <div className="call-to-action">
             <Heading heading="Like what you see? Let's work together." />
@@ -72,6 +77,10 @@ export const pageQuery = graphql`
   query($slug: String!) {
     contentfulCaseStudy(slug: { eq: $slug }) {
       title
+      wysiwyg {
+        id
+        json
+      }
       slug
       body {
         body
