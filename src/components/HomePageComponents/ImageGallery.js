@@ -48,12 +48,15 @@ const GalleryWrapper = styled.div`
   display: grid;
   grid-template-columns: 220px 380px 220px 380px 220px 380px 220px 380px;
   grid-column-gap: 20px;
-  padding-left: 42px;
+  padding-left: 30px;
   overflow-x: scroll;
   width: auto;
-
   .item {
     border-radius: 5px;
     height: 100%;
+  }
+  @media (max-width: 768px) {
+    padding-left: 12px;
+    grid-column-gap: 18px;
   }
 `
