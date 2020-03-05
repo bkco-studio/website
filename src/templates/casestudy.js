@@ -7,7 +7,7 @@ import styled from "styled-components"
 const CaseStudy = ({ data }) => {
   const { title, body, image } = data.contentfulCaseStudy
   return (
-    <Layout>
+    <Layout homepage={false}>
       <Section>
         <CaseStudyWrapper>
           <div>

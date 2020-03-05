@@ -14,17 +14,27 @@ export default class Navbar extends Component {
     })
   }
   render() {
-    return (
-      <NavWrapper>
-        <NavbarHeader handleNavbar={this.handleNavbar} />
-        <NavbarLinks navbarOpen={this.state.navbarOpen} />
-      </NavWrapper>
-    )
+    console.log("IS THIS THE HOMEPEAGE: ", this.props.homepage)
+    if (this.props.homepage) {
+      return (
+        <NavWrapper prime>
+          <NavbarHeader handleNavbar={this.handleNavbar} color="white" />
+          <NavbarLinks navbarOpen={this.state.navbarOpen} color="white" />
+        </NavWrapper>
+      )
+    } else {
+      return (
+        <NavWrapper>
+          <NavbarHeader handleNavbar={this.handleNavbar} color="black" />
+          <NavbarLinks navbarOpen={this.state.navbarOpen} color="black" />
+        </NavWrapper>
+      )
+    }
   }
 }
 
 const NavWrapper = styled.nav`
-  background-color: #343731;
+  background-color: ${props => (props.prime ? "#343731" : "white")};
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 `
