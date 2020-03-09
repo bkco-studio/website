@@ -114,6 +114,26 @@ const CaseStudiesWrapper = styled.div`
         max-width: 100%;
       }
     }
+    .grid {
+      border: 1px solid blue;
+      .project-title, .project-description  {
+        border: 1px solid red;
+        padding-left: 0px;
+        
+      }
+      .case-study {
+        img {
+        border: 2px solid green;
+        padding-left: 12px;
+      }
+      }
+      .case-study:first-of-type {
+        img {
+        border: 2px solid green;
+        padding-left: 12px;
+      }
+      }
+    }
     }
   }
 `
