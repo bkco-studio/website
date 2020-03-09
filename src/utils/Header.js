@@ -8,7 +8,7 @@ export default function HomeHeader() {
       <h2>We design & build software experiences with conviction.</h2>
       <section class="demo">
         <a onClick={() => scrollTo("#imageGallery")}>
-          <span></span>Scroll
+          <span></span>
         </a>
       </section>
     </IndexHeader>
