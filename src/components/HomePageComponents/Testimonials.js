@@ -117,6 +117,8 @@ const TestimonialWrapper = styled.div`
   .testimony-header-text {
     padding: 2rem 0;
     margin: 0 auto;
+    margin-left: 122px;
+
     max-width: 1000px;
   }
 
