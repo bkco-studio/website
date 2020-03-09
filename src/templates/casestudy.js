@@ -12,15 +12,18 @@ const CaseStudy = ({ data }) => {
 
   return (
     <Layout homepage={false}>
-      <Section>
-        <CaseStudyWrapper>
-          <div>
-            <img alt={title} src={image.file.url} />
-            <h1>{title}</h1>
-            <p className="body-text">{body.body}</p>
-            <div>{renderWysiwyg()}</div>
+      <CaseStudyWrapper>
+        <Section>
+          <div className="work-container">
+            <img className="work-image" alt={title} src={image.file.url} />
+            <h1 className="work-title">{title}</h1>
+            <div className="work-body">{body.body}</div>
+            <div className="wysiwyg">{renderWysiwyg()}</div>
           </div>
-          <div className="call-to-action">
+        </Section>
+
+        <div className="call-to-action">
+          <div className="call-to-action-content">
             <Heading heading="Like what you see? Let's work together." />
             <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " />
             <div className="submit-container">
@@ -31,27 +34,29 @@ const CaseStudy = ({ data }) => {
               />
             </div>
           </div>
-        </CaseStudyWrapper>
-      </Section>
+        </div>
+      </CaseStudyWrapper>
     </Layout>
   )
 }
 
 const CaseStudyWrapper = styled.div`
-  .body-text {
-    margin-bottom: 10em;
-  }
   .call-to-action {
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
     padding-top: 2em;
     padding-bottom: 2em;
     margin-top: 3em;
+    /* width: 1200px; */
+    margin: 0 auto;
+  }
+  .call-to-action-content {
+    margin-left: 125px;
   }
   .submit-container {
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    width: 800px;
+    max-width: 800px;
   }
   .submit-button {
     color: ${styles.colors.mainWhite};
@@ -68,6 +73,38 @@ const CaseStudyWrapper = styled.div`
       cursor: pointer;
     }
     margin-right: 2rem;
+  }
+  .work-container {
+  }
+  .work-image {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+  .work-title,
+  .work-body {
+    margin-left: 125px;
+  }
+  .work-title {
+    margin-top: 4em;
+  }
+
+  .wysiwyg {
+    margin-left: 125px;
+    margin-bottom: 5em;
+  }
+
+  @media (max-width: 768px) {
+    .work-title,
+    .work-body,
+    .wysiwyg,
+    .call-to-action-content {
+      margin-left: 42px;
+      margin: 1px solid blue;
+    }
+    .work-image {
+      padding-right: 30px;
+    }
   }
 `
 
