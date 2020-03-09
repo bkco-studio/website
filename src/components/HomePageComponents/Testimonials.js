@@ -79,11 +79,7 @@ export default class Testimonials extends Component {
 
 const TestimonialWrapper = styled.div`
   .testimonial-wrapper {
-    /* font-size: 72px; */
-    /* display: grid; */
-    /* grid-template-columns: 100px 1fr; */
     padding-bottom: 3rem;
-    /* grid-column-gap: 250px; */
   }
   .testimony-avatar {
     height: 62px;
@@ -92,13 +88,9 @@ const TestimonialWrapper = styled.div`
     border-radius: 50%;
     margin-bottom: 1.5em;
     margin-right: 1.5em;
-    /* margin: 0 auto; */
   }
   .testimony-name {
     margin-bottom: 0.75rem;
-  }
-  .testimony-title {
-    /* text-align: center; */
   }
   .testimonial-text {
     line-height: 1.67;
@@ -136,6 +128,9 @@ const TestimonialWrapper = styled.div`
   @media (max-width: 768px) {
     .testimonial-wrapper {
       padding-left: 15px;
+    }
+    .testimony-header-text {
+      margin-left: 24px;
     }
   }
 `
