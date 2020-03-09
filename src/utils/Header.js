@@ -64,9 +64,6 @@ const IndexHeader = styled.header`
       margin-left: 25px;
       padding-left: 20px;
     }
-    a span {
-      bottom: 75px;
-    }
   }
 `
 
