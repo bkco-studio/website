@@ -9,7 +9,6 @@ export default class Navbar extends Component {
     navbarOpen: false,
     isHamburger: true,
     navbarColor: false,
-    logoColor: false,
   }
   handleNavbar = () => {
     this.setState(() => {
@@ -38,7 +37,7 @@ export default class Navbar extends Component {
       )
     } else {
       return (
-        <NavWrapper>
+        <NavWrapper navbarColor={true}>
           <NavbarHeader
             handleNavbar={this.handleNavbar}
             color="black"
@@ -54,7 +53,6 @@ export default class Navbar extends Component {
 const NavWrapper = styled.nav`
   background-color: ${props => (props.homePage ? "#343731" : "white")};
   background-color: ${props => (props.navbarColor ? "white" : "#343731")};
-
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 `
