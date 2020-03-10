@@ -88,4 +88,16 @@ const LinkWrapper = styled.ul`
   background-color: white;
   overflow: hidden;
   /* ${styles.transitionDefault}; */
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    padding-left: 25%;
+    padding-top: ${props => (props.open ? `50%` : `0`)};
+    li {
+      margin-left: 0;
+    }
+    .nav-link {
+      font-size: 24px;
+    }
+    
+  }
 `
