@@ -1,13 +1,14 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import logo from "../../../images/BKCO.svg"
-import { MdMenu } from "react-icons/md"
+import { MdMenu, MdClose } from "react-icons/md"
 import styled from "styled-components"
 import { styles } from "../../../utils"
 
 export default class NavbarHeader extends Component {
   render() {
-    const { handleNavbar, color } = this.props
+    const { handleNavbar, color, isHamburger } = this.props
+    console.log("ISHAMBURGER", isHamburger)
     return (
       <HeaderWrapper>
         <Link to="/">
@@ -23,15 +24,26 @@ export default class NavbarHeader extends Component {
             </g>
           </svg>
         </Link>
-        <div
-          onClick={() => {
-            console.log("This was clicked successfully in local dev")
-            handleNavbar()
-          }}
-          style={{ color: color }}
-        >
-          <MdMenu className="toggle-icon"></MdMenu>
-        </div>
+        {isHamburger && (
+          <div
+            onClick={() => {
+              handleNavbar()
+            }}
+            style={{ color: color }}
+          >
+            <MdMenu className="toggle-icon"></MdMenu>
+          </div>
+        )}
+        {!isHamburger && (
+          <div
+            onClick={() => {
+              handleNavbar()
+            }}
+            style={{ color: `black` }}
+          >
+            <MdClose className="toggle-icon"></MdClose>
+          </div>
+        )}
       </HeaderWrapper>
     )
   }
