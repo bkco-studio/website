@@ -115,7 +115,6 @@ const CaseStudiesWrapper = styled.div`
       }
     }
     .grid {
-      border: 1px solid blue;
       .project-title, .project-description  {
         padding-left: 0px;
         
