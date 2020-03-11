@@ -32,25 +32,30 @@ export default () => (
       const caseStudies = data.allContentfulCaseStudy.edges
       return (
         <CaseStudiesWrapper>
-          <div className="grid">
-            {caseStudies.map(({ node }) => (
-              <div className="case-study" key={node.id}>
-                <div>
-                  <img
-                    className="work-image"
-                    src={node.image.file.url}
-                    alt=""
-                  />
+          <Section>
+            <div className="grid">
+              {caseStudies.map(({ node }) => (
+                <div className="case-study" key={node.id}>
+                  <div>
+                    <img
+                      className="work-image"
+                      src={node.image.file.url}
+                      alt=""
+                    />
+                  </div>
+                  {/* <Section> */}
+                  <Link
+                    className="project-title"
+                    to={`/casestudy/${node.slug}`}
+                  >
+                    {node.title}
+                  </Link>
+                  <div className="project-description">{node.body.body}</div>
+                  {/* </Section> */}
                 </div>
-                {/* <Section> */}
-                <Link className="project-title" to={`/casestudy/${node.slug}`}>
-                  {node.title}
-                </Link>
-                <div className="project-description">{node.body.body}</div>
-                {/* </Section> */}
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Section>
         </CaseStudiesWrapper>
       )
     }}
@@ -62,11 +67,37 @@ const CaseStudiesWrapper = styled.div`
   .grid {
     display: grid;
     grid-gap: 1em;
+    /* margin: 0 auto; */
     color: ${styles.colors.mainGrey};
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 460px 460px; */
+
+    .case-study {
+      /* max-width: 100%; */
+      display: inline;
+      max-width: 460px;
+      img {
+        max-width: 100%;
+        /* padding-left: 30px; */
+        margin-bottom: 24px;
+      }
+    }
+
+   
+    .case-study:first-of-type {
+      display: block;
+      /* margin: 0 auto; */
+      max-width: 100%;
+      /* background-color: red; */
+      grid-column: 1 / 3;
+      /* width: 900px; */
+      img {
+        max-width: 100%;
+        padding-left: 0;
+      }
+    }
     .project-title {
       margin-bottom: 7px;
-      margin-left: 12px;
+      /* margin-left: 12px; */
       padding-top: 24px;
       color: inherit;
       font-size: 1.5rem;
@@ -78,55 +109,45 @@ const CaseStudiesWrapper = styled.div`
     .project-description {
       font-size: 1.12rem;
       margin-bottom: 30px;
-      margin-left: 12px;
+      /* margin-left: 12px; */
       font-family: "Noto Serif SC", serif;
       /* margin-top: 7px; */
     }
     .project-title, .project-description {
-      padding-left: 24px;
+      /* padding-left: 24px; */
     }
-    .case-study {
-      display: inline;
-      img {
-        max-width: 100%;
-        padding-left: 30px;
-        margin-bottom: 24px;
-      }
-    }
-
-   
-    .case-study:first-of-type {
-      display: block;
-      margin: 0 auto;
-      /* background-color: red; */
-      grid-column: 1 / 3;
-      /* width: 900px; */
-      img {
-        max-width: 100%;
-        padding-left: 30px;
-      }
-    }
+    
   }
   @media (max-width: 768px) {
-    .case-study {
-      grid-column: 1 / 3;
-      img {
-        max-width: 100%;
+    .grid {
+      .case-study {
+        grid-column: 1 / 3;
+        img {
+          max-width: 100%;
+        }
       }
+      
     }
+
     .grid {
       .project-title, .project-description  {
-        padding-left: 0px;
+        padding-left: 12px;
         
       }
       .case-study {
+        /* padding-right: 10px; */
         img {
-        padding-left: 12px;
+        /* padding-left: 12px; */
       }
+
       }
       .case-study:first-of-type {
+        max-width: 460px;
+        grid-column: 1 / 3;
+        margin: 0 0;
         img {
-        padding-left: 12px;
+        /* padding-left: 12px; */
+        max-width: 100%;
       }
       }
     }
