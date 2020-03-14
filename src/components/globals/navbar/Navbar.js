@@ -29,7 +29,7 @@ export default class Navbar extends Component {
         >
           <NavbarHeader
             handleNavbar={this.handleNavbar}
-            color={"white"}
+            logoColor={this.state.isHamburger ? "white" : "black"}
             isHamburger={this.state.isHamburger}
           />
           <NavbarLinks navbarOpen={this.state.navbarOpen} color="black" />
@@ -40,7 +40,7 @@ export default class Navbar extends Component {
         <NavWrapper navbarColor={true}>
           <NavbarHeader
             handleNavbar={this.handleNavbar}
-            color="black"
+            logoColor="black"
             isHamburger={this.state.isHamburger}
           />
           <NavbarLinks navbarOpen={this.state.navbarOpen} color="black" />
