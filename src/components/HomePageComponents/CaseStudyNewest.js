@@ -39,12 +39,10 @@ export default () => (
                 <div className="work-image">
                   <img src={node.image.file.url} alt="" />
                 </div>
-                {/* <Section> */}
                 <Link className="project-title" to={`/casestudy/${node.slug}`}>
                   {node.title}
                 </Link>
                 <div className="project-description">{node.body.body}</div>
-                {/* </Section> */}
               </div>
             ))}
           </div>
@@ -56,18 +54,15 @@ export default () => (
 )
 
 const CaseStudiesWrapper = styled.div`
-  /* margin-top: 50px; */
-  padding: 2rem 2em;
-  margin: 0 auto;
-  /* margin-left: 60px; */
-  /* background-color: ${styles.colors.mainGrey}; */
-  max-width: 100%;
+ 
   display: grid;
   place-content: center;
   .grid {
-    /* margin: 0 auto; */
+    max-width: 100%;
     display: grid;
-    grid-gap: 20px;
+    place-items: center;
+    /* grid-gap: 20px; */
+    /* padding: 0 2em; */
     /* margin: 0 auto; */
     color: ${styles.colors.mainGrey};
     /* grid-template-columns: 460px 460px; */
@@ -75,34 +70,40 @@ const CaseStudiesWrapper = styled.div`
     .case-study {
       /* max-width: 100%; */
       display: inline;
-      max-width: 100%;
+      /* max-width: 95%; */
+      /* display: grid;  */
+      /* place-items: center; */
+      padding-left: 24px;
       .work-image {
-        border: 1px solid blue;
-        /* width: 1200px; */
       }
       img {
-        max-width: 100%;
+        max-width: 95%;
         /* padding-left: 30px; */
-        margin-bottom: 24px;
+        /* padding: 0 2em; */
+        /* margin-bottom: 24px; */
       }
     }
 
    
     .case-study:first-of-type {
-      display: block;
+      width: 100vw;
+      padding: 0 2em;
+      /* display: block; */
+      /* display: grid;
+      place-items: center; */
       .work-image {
-        background-color: orange;
+        display: grid;
+        place-items: center;
+        background-color: #343731;
 
          /* width: 900px; */
-      img {
-        max-width: 100%;
-        padding: 2em;
+        /* max-width: 940px; */
+        /* padding: 2em; */
         /* margin: 0 auto; */
-      }
         }
 
       /* margin: 0 auto; */
-      max-width: 100%;
+      max-width: 100vw;
       /* background-color: red; */
       grid-column: 1 / 3;
       
@@ -137,7 +138,7 @@ const CaseStudiesWrapper = styled.div`
       .case-study {
         grid-column: 1 / 3;
         img {
-          max-width: 100%;
+          max-width: 93%;
         }
       }
       
@@ -152,7 +153,7 @@ const CaseStudiesWrapper = styled.div`
         /* padding-right: 10px; */
         img {
         /* padding-left: 12px; */
-        width: 100%;
+        max-width: 93%;
       }
 
       }
