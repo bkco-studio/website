@@ -13,14 +13,18 @@ const CaseStudy = ({ data }) => {
   return (
     <Layout homepage={false}>
       <CaseStudyWrapper>
-        <Section>
-          <div className="work-container">
+        {/* <Section> */}
+        <div className="work-container">
+          <div className="image-container">
             <img className="work-image" alt={title} src={image.file.url} />
+          </div>
+          <div className="work-container-body">
             <h1 className="work-title">{title}</h1>
             <div className="work-body">{body.body}</div>
             <div className="wysiwyg">{renderWysiwyg()}</div>
           </div>
-        </Section>
+        </div>
+        {/* </Section> */}
 
         <div className="call-to-action">
           <div className="call-to-action-content">
@@ -41,6 +45,47 @@ const CaseStudy = ({ data }) => {
 }
 
 const CaseStudyWrapper = styled.div`
+  padding: 0 1.5em;
+  /* display: grid; */
+  /* place-items: center; */
+  .work-container-body {
+    /* background-color: grey; */
+    margin-left: 120px;
+  }
+  .image-container {
+    display: grid;
+    place-items: center;
+    background-color: grey;
+  }
+  .work-image {
+    max-width: 100%;
+    /* margin: 0 auto; */
+    margin-left: 20px;
+  }
+  .work-title,
+  .work-body {
+    /* margin-left: 125px; */
+    /* font-size: 20px; */
+  }
+  .work-title {
+    margin-top: 2em;
+  }
+
+  .work-body {
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #343731;
+  }
+
+  .wysiwyg {
+    /* margin-left: 125px; */
+    margin-bottom: 5em;
+  }
   .call-to-action {
     background-color: #f5f5f5;
     padding-top: 2em;
@@ -51,6 +96,7 @@ const CaseStudyWrapper = styled.div`
   }
   .call-to-action-content {
     margin-left: 125px;
+    width: 700px;
   }
   .submit-container {
     display: flex;
@@ -73,25 +119,6 @@ const CaseStudyWrapper = styled.div`
       cursor: pointer;
     }
     margin-right: 2rem;
-  }
-  .work-container {
-  }
-  .work-image {
-    max-width: 100%;
-    margin: 0 auto;
-    margin-left: 20px;
-  }
-  .work-title,
-  .work-body {
-    margin-left: 125px;
-  }
-  .work-title {
-    margin-top: 4em;
-  }
-
-  .wysiwyg {
-    margin-left: 125px;
-    margin-bottom: 5em;
   }
 
   @media (max-width: 768px) {
