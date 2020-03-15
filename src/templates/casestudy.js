@@ -108,7 +108,7 @@ const CaseStudyWrapper = styled.div`
 
   .wysiwyg {
     /* margin-left: 125px; */
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 
     img {
       /* display: none; */
@@ -134,9 +134,9 @@ const CaseStudyWrapper = styled.div`
     h4,
     h5,
     h6,
-    p,
     div {
       /* margin-left: 122px; */
+      padding: 0 8em;
     }
 
     h2 {
@@ -145,14 +145,14 @@ const CaseStudyWrapper = styled.div`
     p {
       font-size: 16px;
       line-height: 33px;
-      padding: 1em 0;
+      padding: 1em 8em;
     }
   }
   .call-to-action {
     background-color: #f5f5f5;
     padding-top: 2em;
     padding-bottom: 2em;
-    margin-top: 3em;
+    /* margin-top: 3em; */
     /* width: 1200px; */
     margin: 0 auto;
   }
@@ -199,6 +199,20 @@ const CaseStudyWrapper = styled.div`
       }
       img:first-of-type {
         padding: 0 1em;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      div {
+        /* margin-left: 122px; */
+        padding: 0 1em;
+        line-height: 1rem;
+      }
+      p {
+        padding: 1em 1em;
       }
     }
 
