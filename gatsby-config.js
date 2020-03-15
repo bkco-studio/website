@@ -70,6 +70,7 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
+        forceFullSync: true,
         spaceId: `kmw6n3oy96q4`,
         accessToken: `FRVFYuAHYdBc0ythoDXRPDIymmF5xuSZGivNEFPiF-Y`,
       },
