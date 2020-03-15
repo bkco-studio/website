@@ -18,6 +18,7 @@ export default () => (
               body {
                 body
               }
+              description
               image {
                 file {
                   url
@@ -42,7 +43,7 @@ export default () => (
                 <Link className="project-title" to={`/casestudy/${node.slug}`}>
                   {node.title}
                 </Link>
-                <div className="project-description">{node.body.body}</div>
+                <div className="project-description">{node.description}</div>
               </div>
             ))}
           </div>
