@@ -222,6 +222,10 @@ const CaseStudyWrapper = styled.div`
       padding-right: 30px;
     }
   }
+  @media (max-width: 768px) {
+    /* display: none; */
+    padding: 0 0.5em;
+  }
 `
 
 export default CaseStudy
