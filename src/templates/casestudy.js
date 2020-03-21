@@ -198,9 +198,14 @@ const CaseStudyWrapper = styled.div`
     .wysiwyg {
       img {
         padding: 0 1em;
+        width: 100%;
+        margin: 0 0;
+        padding: 0 0;
       }
       img:first-of-type {
-        padding: 0 1em;
+        width: 100%;
+        margin: 0 0;
+        padding: 0 0;
       }
       h1,
       h2,
@@ -216,15 +221,21 @@ const CaseStudyWrapper = styled.div`
       p {
         padding: 1em 1em;
       }
+      img {
+      }
     }
 
     .work-image {
-      padding-right: 30px;
+      /* padding-right: 30px; */
     }
   }
   @media (max-width: 768px) {
     /* display: none; */
     padding: 0 0.5em;
+    .work-image {
+      margin-left: 0;
+      padding-right: 0;
+    }
   }
 `
 
