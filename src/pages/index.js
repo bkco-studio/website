@@ -8,6 +8,7 @@ import Testimonials from "../components/HomePageComponents/Testimonials"
 import CaseStudyNewest from "../components/HomePageComponents/CaseStudyNewest"
 import BodySection from "../components/HomePageComponents/BodySection"
 import ImageGallery from "../components/HomePageComponents/ImageGallery"
+import Footer from "../components/globals/Footer"
 
 const IndexPage = ({ data }) => {
   return (
@@ -23,6 +24,7 @@ const IndexPage = ({ data }) => {
       <CaseStudyNewest />
       <Testimonials />
       <ContactUs />
+      <Footer />
     </Layout>
   )
 }
