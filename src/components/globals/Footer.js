@@ -125,18 +125,18 @@ const FooterWrapper = styled.div`
     }
     display: grid;
     grid-template-columns: 1fr;
-  }
-  .get-in-touch-buttons {
-    display: block;
-  }
-  .get-in-touch-button {
-    margin-bottom: 11px;
-  }
-  img {
-    display: none;
-  }
+    .get-in-touch-buttons {
+      display: block;
+    }
+    .get-in-touch-button {
+      margin-bottom: 11px;
+    }
+    img {
+      display: none;
+    }
 
-  .footer-column-header {
-    margin-top: 12px;
+    .footer-column-header {
+      margin-top: 12px;
+    }
   }
 `
