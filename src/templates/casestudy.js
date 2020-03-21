@@ -5,6 +5,7 @@ import { Section, Heading, Text, styles } from "../utils"
 import styled from "styled-components"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Footer from "../components/globals/Footer"
 
 const CaseStudy = ({ data }) => {
   const { title, body, image, wysiwyg, description } = data.contentfulCaseStudy
@@ -56,6 +57,7 @@ const CaseStudy = ({ data }) => {
             </div>
           </div>
         </div>
+        <Footer />
       </CaseStudyWrapper>
     </Layout>
   )

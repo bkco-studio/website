@@ -10,7 +10,6 @@ const Layout = ({ children, homepage }) => {
       <GlobalStyle />
       <Navbar homepage={homepage} />
       {children}
-      <Footer />
     </React.Fragment>
   )
 }
