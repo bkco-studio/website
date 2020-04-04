@@ -84,7 +84,7 @@ const TestimonialWrapper = styled.div`
   .testimony-avatar {
     height: 62px;
     width: 62px;
-    background-color: blue;
+    /* background-color: blue; */
     border-radius: 50%;
     margin-bottom: 1.5em;
     margin-right: 1.5em;
