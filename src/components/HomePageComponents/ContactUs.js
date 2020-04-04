@@ -96,6 +96,7 @@ const FormWrapper = styled.div`
   padding: 2em 8em;
   margin-bottom: 1em;
   /* display: grid; */
+  background: #f8f8f8;
   .formgrid {
     display: grid;
     grid-template-columns: 380px 380px;
