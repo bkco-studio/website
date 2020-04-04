@@ -60,6 +60,7 @@ const CaseStudiesWrapper = styled.div`
   place-content: center;
   .grid {
     max-width: 100%;
+
     display: grid;
     place-items: center;
     /* grid-gap: 20px; */
@@ -96,6 +97,8 @@ const CaseStudiesWrapper = styled.div`
         display: grid;
         place-items: center;
         background-color: #343731;
+  border-radius: 5px;
+
 
          /* width: 900px; */
         /* max-width: 940px; */
