@@ -47,30 +47,30 @@ export default class Testimonials extends Component {
             <Text text="The partnerships with our clients are our number one priority. We value honest and open communication becauses it leads to a better end result. Here are some nice things some past clients have said about working with us:" />
           </div>
         </div>
-        <Section>
-          {this.state.testimonials.map(testimonial => {
-            return (
-              <div className="testimonial-wrapper" key={testimonial.id}>
-                <blockquote>
-                  <div className="testimonial-text">
-                    <div className="testimonial-quote">&ldquo;</div>
-                    <div>{testimonial.text}"</div>
-                  </div>
-                </blockquote>
-                <div className="testimonial-detail">
-                  {/* <Img fluid={GET_IMAGE.img1.childImageSharp.fluid} /> */}
-                  {/* <div className="testimony-avatar"></div> */}
-                  <img className="testimony-avatar" src={testimonial.img} />
+        {/* <Section> */}
+        {this.state.testimonials.map(testimonial => {
+          return (
+            <div className="testimonial-wrapper" key={testimonial.id}>
+              <blockquote>
+                <div className="testimonial-text">
+                  <div className="testimonial-quote">&ldquo;</div>
+                  <div>{testimonial.text}"</div>
+                </div>
+              </blockquote>
+              <div className="testimonial-detail">
+                {/* <Img fluid={GET_IMAGE.img1.childImageSharp.fluid} /> */}
+                {/* <div className="testimony-avatar"></div> */}
+                <img className="testimony-avatar" src={testimonial.img} />
 
-                  <div>
-                    <div className="testimony-name">{testimonial.name}</div>
-                    <div className="testimony-title">{testimonial.title}</div>
-                  </div>
+                <div>
+                  <div className="testimony-name">{testimonial.name}</div>
+                  <div className="testimony-title">{testimonial.title}</div>
                 </div>
               </div>
-            )
-          })}
-        </Section>
+            </div>
+          )
+        })}
+        {/* </Section> */}
       </TestimonialWrapper>
       // </Section>
     )
@@ -79,12 +79,13 @@ export default class Testimonials extends Component {
 
 const TestimonialWrapper = styled.div`
   .testimonial-wrapper {
+    max-width: 100%;
+    width: 600px;
     padding-bottom: 3rem;
   }
   .testimony-avatar {
     height: 62px;
     width: 62px;
-    /* background-color: blue; */
     border-radius: 50%;
     margin-bottom: 1.5em;
     margin-right: 1.5em;
@@ -102,20 +103,24 @@ const TestimonialWrapper = styled.div`
 
   .testimony-header {
     background-color: #f8f8f8;
-    padding: 2em 0;
+    padding: 2em 24px;
     margin-bottom: 1em;
   }
+  .testimonial-header-text {
+    padding-left: 24px;
+  }
 
-  .testimony-header-text {
+  /* .testimony-header-text {
     padding: 2rem 0;
     margin: 0 auto;
     margin-left: 122px;
 
     max-width: 1000px;
-  }
+  } */
 
   .testimonial-detail {
     display: flex;
+    width: 100%;
   }
   .testimonial-quote {
     font-size: 4em;
@@ -124,13 +129,28 @@ const TestimonialWrapper = styled.div`
     top: -30px;
     opacity: 0.3;
     color: #343731;
+    width: 100%;
   }
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
+    width: 100%;
+    /* display: hidden; */
     .testimonial-wrapper {
+      width: 100%;
+      /* margin-left: 24px; */
+      display: hidden;
       padding-left: 15px;
+      padding: 0 3em;
     }
-    .testimony-header-text {
+    .testimony-header {
+      width: 100%;
+      padding: 0 3em;
+      /* padding-left: 24px;
       margin-left: 24px;
+      padding: 2rem 0;
+      margin: 0 auto;
+      margin-left: 122px;
+
+      max-width: 1000px; */
     }
   }
 `

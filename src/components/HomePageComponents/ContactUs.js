@@ -190,7 +190,6 @@ const FormWrapper = styled.div`
     }
     .input-box {
       min-width: 100%;
-      border: 2px solid blue;
     }
   }
 `
