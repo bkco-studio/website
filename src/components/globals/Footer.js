@@ -1,7 +1,7 @@
 import React from "react"
 import { styles, Section } from "../../utils"
 import styled from "styled-components"
-import logo from "../../images/BKCO.svg"
+import logo from "../../images/BKCOdark.svg"
 import { FaTwitter, FaInstagram } from "react-icons/fa"
 
 export default function Footer() {
@@ -51,7 +51,7 @@ const FooterWrapper = styled.div`
   background-color: ${styles.colors.mainWhite};
   border-radius: 5px;
   height: 374px;
-  padding: 37px 0;
+  padding: 37px 2em;
   color: ${styles.colors.mainBlack};
   font-family: "Noto Serif SC", serif;
   display: grid;

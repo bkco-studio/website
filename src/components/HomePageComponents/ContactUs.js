@@ -188,10 +188,10 @@ const FormWrapper = styled.div`
       grid-template-columns: 380px;
       grid-column-gap: 1rem;
     }
-  }
-  @media (max-width: 768px) {
-    /* display: hidden;
-    max-width: 700px; */
+    .input-box {
+      min-width: 100%;
+      border: 2px solid blue;
+    }
   }
 `
 

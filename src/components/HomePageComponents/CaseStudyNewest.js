@@ -2,8 +2,7 @@ import React from "react"
 
 import { StaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
-import { Section, styles } from "../../utils"
-// import CaseStudies from "../../pages/casestudies"
+import { styles } from "../../utils"
 
 export default () => (
   <StaticQuery
@@ -33,7 +32,6 @@ export default () => (
       const caseStudies = data.allContentfulCaseStudy.edges
       return (
         <CaseStudiesWrapper>
-          {/* <Section> */}
           <div className="grid">
             {caseStudies.map(({ node }) => (
               <div className="case-study" key={node.id}>
@@ -47,7 +45,6 @@ export default () => (
               </div>
             ))}
           </div>
-          {/* </Section> */}
         </CaseStudiesWrapper>
       )
     }}
@@ -55,72 +52,28 @@ export default () => (
 )
 
 const CaseStudiesWrapper = styled.div`
- 
-  display: grid;
-  place-content: center;
   .grid {
-    max-width: 100%;
-
-    display: grid;
-    place-items: center;
-    /* grid-gap: 20px; */
-    /* padding: 0 2em; */
-    /* margin: 0 auto; */
     color: ${styles.colors.mainGrey};
-    /* grid-template-columns: 460px 460px; */
-
+    padding: 0 6px;
     .case-study {
-      /* max-width: 100%; */
-      display: inline;
-      /* max-width: 95%; */
-      /* display: grid;  */
-      /* place-items: center; */
-      padding-left: 24px;
-      .work-image {
-      }
+      max-width: 100%;
+      display: hidden;
       img {
-        max-width: 95%;
-        /* padding-left: 30px; */
-        /* padding: 0 2em; */
-        /* margin-bottom: 24px; */
+        max-width: 100%;
+        border-radius: 5px;
       }
     }
-
-   
     .case-study:first-of-type {
-      width: 100vw;
-      padding: 0 2em;
-      /* display: block; */
-      /* display: grid;
-      place-items: center; */
-      .work-image {
-        display: grid;
-        place-items: center;
-        background-color: #343731;
-  border-radius: 5px;
-
-
-         /* width: 900px; */
-        /* max-width: 940px; */
-        /* padding: 2em; */
-        /* margin: 0 auto; */
-        }
-
-      /* margin: 0 auto; */
-      max-width: 100vw;
-      /* background-color: red; */
-      grid-column: 1 / 3;
-      
-     
-      
+      img {
+        border-radius: 5px;
+      }
     }
     .project-title {
+      display: block;
       margin-bottom: 7px;
-      /* margin-left: 12px; */
-      padding-top: 24px;
+      margin-top: 24px;
       color: inherit;
       font-size: 1.5rem;
-      /* padding-bottom: 7px; */
       text-decoration: none;
       cursor: pointer;
     }
@@ -128,47 +81,57 @@ const CaseStudiesWrapper = styled.div`
     .project-description {
       font-size: 1.12rem;
       margin-bottom: 30px;
-      /* margin-left: 12px; */
       font-family: "Noto Serif SC", serif;
-      /* margin-top: 7px; */
     }
     .project-title, .project-description {
-      /* padding-left: 24px; */
     }
     
   }
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .grid {
-      .case-study {
-        grid-column: 1 / 3;
-        img {
-          max-width: 93%;
-        }
-      }
-      
-    }
-
-    .grid {
+      display: grid;
+      padding: 0 42px;
+      width: 100%;
+      grid-template-areas: 'area1 area1 area1'
+      'area2 20px area3';
+      grid-template-columns: 1fr 20px 1fr;
       .project-title, .project-description  {
         padding-left: 12px;
-        
       }
       .case-study {
-        /* padding-right: 10px; */
+        .work-image {
+          border-radius: 5px;
+        }
         img {
-        /* padding-left: 12px; */
-        max-width: 93%;
+          max-width: 100%;
       }
-
       }
       .case-study:first-of-type {
-        /* max-width: 460px; */
-        grid-column: 1 / 3;
-        margin: 0 0;
+        width: 100%;
+        grid-area: area1;
+        display: grid;
+        .work-image {
+          display: grid;
+          place-content: center;
+          background-color: grey;
+        }
         img {
-        /* padding-left: 12px; */
-        max-width: 100%;
+          border-radius: 0px;
+          width: 800px;
+        }
       }
+      .case-study:nth-of-type(2) {
+        grid-area: area2;
+        height: 100%;
+        width: 100%;
+        .work-image {
+          border-radius: 5px;
+        }
+      }
+      .case-study:nth-of-type(3) {
+        grid-area: area3;
+        height: 100%;
+        width: 100%;
       }
     }
     }
