@@ -93,43 +93,27 @@ const ContactUs = () => {
 }
 
 const FormWrapper = styled.div`
-  padding: 2em 8em;
+  padding: 2em 7em;
   margin-bottom: 1em;
-  /* display: grid; */
   background: #f8f8f8;
   .formgrid {
     display: grid;
     grid-template-columns: 380px 380px;
     grid-gap: 1em;
   }
-
-  /* select option[data-default] {
-    color: blue;
-  } */
   select option[data-default] {
     font-size: 46px;
   }
-  /* .placeholder {
-    display: none;
-  }
-  [disabled] {
-    color: gray;
-  } */
   .form-item__element--select {
     appearance: none;
     :invalid {
       color: gray;
     }
-
-    /* :[disabled]  {
-      color: gray;
-    } */
   }
   input,
   select,
   textarea {
     border: none;
-    /* border-bottom: 1px solid black; */
     width: 300px;
     padding: 0.5rem;
   }
@@ -144,7 +128,6 @@ const FormWrapper = styled.div`
   }
   .submit-container {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     max-width: 800px;
   }

@@ -81,13 +81,13 @@ const TestimonialWrapper = styled.div`
   .testimonial-wrapper {
     max-width: 100%;
     width: 600px;
-    padding-bottom: 3rem;
+    padding-bottom: 0.5rem;
   }
   .testimony-avatar {
     height: 62px;
     width: 62px;
     border-radius: 50%;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
     margin-right: 1.5em;
   }
   .testimony-name {
@@ -95,7 +95,7 @@ const TestimonialWrapper = styled.div`
   }
   .testimonial-text {
     line-height: 1.67;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     /* display: grid; */
     position: relative;
     font-family: "Noto Serif SC", serif;
@@ -139,11 +139,15 @@ const TestimonialWrapper = styled.div`
       /* margin-left: 24px; */
       display: hidden;
       padding-left: 15px;
-      padding: 0 3em;
+      /* padding: 0 3em; */
+      /* padding: 2em 0; */
+      padding-left: 110px;
+      margin-bottom: 3em;
     }
     .testimony-header {
       width: 100%;
-      padding: 0 3em;
+      padding: 2em 0;
+      padding-left: 110px;
       /* padding-left: 24px;
       margin-left: 24px;
       padding: 2rem 0;
