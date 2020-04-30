@@ -51,16 +51,16 @@ export default function ImageGallery() {
 const GalleryWrapper = styled.div`
   display: grid;
   grid-template-columns: 220px 380px 220px 380px 220px 380px 220px 380px;
-  grid-column-gap: 20px;
-  padding-left: 30px;
+  grid-column-gap: 18px;
+  padding-left: 12px;
   overflow-x: scroll;
   width: auto;
   .item {
     border-radius: 5px;
     height: 100%;
   }
-  @media (max-width: 768px) {
-    padding-left: 12px;
-    grid-column-gap: 18px;
+  @media (min-width: 768px) {
+    padding-left: 30px;
+    grid-column-gap: 20px;
   }
 `

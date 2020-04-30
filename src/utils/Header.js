@@ -35,9 +35,9 @@ const IndexHeader = styled.header`
     color: #fff;
     font-size: 36px;
     padding: 1rem;
-    line-height: 1.33;
-    max-width: 750px;
-
+    line-height: 1.42;
+    max-width: 597px;
+    font-weight: 900;
     padding-left: 31px;
     font-family: "Noto Serif SC", serif;
     border-left-style: solid;
