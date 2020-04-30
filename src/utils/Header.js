@@ -5,8 +5,10 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 export default function HomeHeader() {
   return (
     <IndexHeader>
-      <div className="header-content-container">
-        <h2>We design & build software experiences with conviction.</h2>
+      <div className="header-container">
+        <h2 className="header__heading">
+          We design & build software experiences with conviction.
+        </h2>
       </div>
       <section>
         <a onClick={() => scrollTo("#imageGallery")}>
@@ -18,7 +20,7 @@ export default function HomeHeader() {
 }
 
 const IndexHeader = styled.header`
-  .header-content-container {
+  .header-container {
     padding-bottom: 46px;
   }
   height: calc(100vh - 92px);
@@ -29,7 +31,7 @@ const IndexHeader = styled.header`
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
-  h2 {
+  .header__heading {
     color: #fff;
     font-size: 36px;
     padding: 1rem;
@@ -41,8 +43,7 @@ const IndexHeader = styled.header`
     border-left-style: solid;
     border-left-width: 2px;
   }
-  h2 {
-  }
+
   a span {
     position: absolute;
     bottom: 50px;
@@ -59,7 +60,7 @@ const IndexHeader = styled.header`
 
   @media (max-width: 768px) {
     max-height: 100vh;
-    h2 {
+    .header__heading {
       font-size: 27px;
       margin-left: 25px;
       padding-left: 20px;
