@@ -27,7 +27,7 @@ export default function ImageGallery() {
       render={data => {
         const images = data.getImages.edges
         return (
-          <div id="imageGallery">
+          <ImageGalleryWrapper>
             <BodySection
               heading="We aren’t your typical development shop."
               text="We focus on business outcomes rather than features to build. Come to us with a problem, and we will come back with a plan on how to solve it. Whether you are looking to grow engagement, launch a product, or aquire your first 100 customers, our team has the experience under our belts to get it done."
@@ -41,12 +41,21 @@ export default function ImageGallery() {
                 )
               })}
             </GalleryWrapper>
-          </div>
+          </ImageGalleryWrapper>
         )
       }}
     />
   )
 }
+
+const ImageGalleryWrapper = styled.div`
+  margin-top: 19px;
+  margin-bottom: 25px;
+  @media (min-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 75px;
+  }
+`
 
 const GalleryWrapper = styled.div`
   display: grid;
@@ -62,5 +71,6 @@ const GalleryWrapper = styled.div`
   @media (min-width: 768px) {
     padding-left: 30px;
     grid-column-gap: 20px;
+    margin-top: 25px;
   }
 `
