@@ -34,11 +34,11 @@ export default () => (
         <CaseStudiesWrapper>
           <div className="grid">
             {caseStudies.map(({ node }) => (
-              <div className="case-study" key={node.id}>
+              <div className="work-example" key={node.id}>
                 <div className="work-image">
                   <img src={node.image.file.url} alt="" />
                 </div>
-                <Link className="project-title" to={`/casestudy/${node.slug}`}>
+                <Link className="work-title" to={`/casestudy/${node.slug}`}>
                   {node.title}
                 </Link>
                 <div className="project-description">{node.description}</div>
@@ -55,23 +55,25 @@ const CaseStudiesWrapper = styled.div`
   .grid {
     color: ${styles.colors.mainGrey};
     padding: 0 6px;
-    .case-study {
+    .work-example {
       max-width: 100%;
       display: hidden;
       img {
         max-width: 100%;
         border-radius: 5px;
+        border: 1px solid green;
+        margin-bottom: 0;
       }
     }
-    .case-study:first-of-type {
+    .work-example:first-of-type {
       img {
         border-radius: 5px;
       }
     }
-    .project-title {
+    .work-title {
       display: block;
       margin-bottom: 7px;
-      margin-top: 24px;
+      margin-top: 12px;
       color: inherit;
       font-size: 1.5rem;
       text-decoration: none;
@@ -83,11 +85,13 @@ const CaseStudiesWrapper = styled.div`
       margin-bottom: 30px;
       font-family: "Noto Serif SC", serif;
     }
-    .project-title, .project-description {
+    .work-title, .project-description {
     }
     
   }
   @media (min-width: 768px) {
+    margin-top: 50px;
+    margin-bottom: 70px;
     .grid {
       display: grid;
       padding: 0 42px;
@@ -95,10 +99,13 @@ const CaseStudiesWrapper = styled.div`
       grid-template-areas: 'area1 area1 area1'
       'area2 20px area3';
       grid-template-columns: 1fr 20px 1fr;
-      .project-title, .project-description  {
+      .work-title, .project-description  {
         padding-left: 12px;
       }
-      .case-study {
+      .work-title {
+        margin-top: 24px;
+      }
+      .work-example {
         .work-image {
           border-radius: 5px;
         }
@@ -106,10 +113,11 @@ const CaseStudiesWrapper = styled.div`
           max-width: 100%;
       }
       }
-      .case-study:first-of-type {
+      .work-example:first-of-type {
         width: 100%;
         grid-area: area1;
         display: grid;
+        margin-bottom: 30px;
         .work-image {
           display: grid;
           place-content: center;
@@ -120,7 +128,7 @@ const CaseStudiesWrapper = styled.div`
           width: 800px;
         }
       }
-      .case-study:nth-of-type(2) {
+      .word-example:nth-of-type(2) {
         grid-area: area2;
         height: 100%;
         width: 100%;
@@ -128,7 +136,7 @@ const CaseStudiesWrapper = styled.div`
           border-radius: 5px;
         }
       }
-      .case-study:nth-of-type(3) {
+      .work-example:nth-of-type(3) {
         grid-area: area3;
         height: 100%;
         width: 100%;
