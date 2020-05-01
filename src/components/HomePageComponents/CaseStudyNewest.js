@@ -74,13 +74,15 @@ const CaseStudiesWrapper = styled.div`
       margin-bottom: 7px;
       margin-top: 12px;
       color: inherit;
-      font-size: 1.5rem;
+      /* font-size: 1.5rem; */
+      font-size: 18px;
       text-decoration: none;
       cursor: pointer;
     }
 
     .project-description {
-      font-size: 1.12rem;
+      /* font-size: 1.12rem; */
+      font-size: 14px;
       margin-bottom: 30px;
       font-family: "Noto Serif SC", serif;
     }

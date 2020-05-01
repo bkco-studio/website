@@ -78,7 +78,10 @@ export default class Testimonials extends Component {
 }
 
 const TestimonialWrapper = styled.div`
+  margin-top: 34px;
+
   .testimonial-wrapper {
+    margin-top: 50px;
     max-width: 100%;
     width: 600px;
     padding-bottom: 0.5rem;
@@ -90,13 +93,24 @@ const TestimonialWrapper = styled.div`
     margin-bottom: 0.5em;
     margin-right: 1.5em;
   }
+  .testimony-name,
+  .testimony-title {
+    text-transform: uppercase;
+  }
   .testimony-name {
     margin-bottom: 0.75rem;
+    font-weight: bold;
+  }
+  .testimony-title {
+    color: #343731;
+    opacity: 0.6;
   }
   .testimonial-text {
     line-height: 1.67;
     margin-bottom: 1em;
     /* display: grid; */
+    /* display: none; */
+    margin-bottom: 34px;
     position: relative;
     font-family: "Noto Serif SC", serif;
   }
@@ -121,8 +135,10 @@ const TestimonialWrapper = styled.div`
   .testimonial-detail {
     display: flex;
     width: 100%;
+    margin-bottom: 34px;
   }
   .testimonial-quote {
+    display: hidden;
     font-size: 4em;
     position: absolute;
     left: -30px;
@@ -130,10 +146,10 @@ const TestimonialWrapper = styled.div`
     opacity: 0.3;
     color: #343731;
     width: 100%;
+    margin-bottom: 34px;
   }
   @media (min-width: 768px) {
     width: 100%;
-    /* display: hidden; */
     .testimonial-wrapper {
       width: 100%;
       /* margin-left: 24px; */
@@ -148,6 +164,7 @@ const TestimonialWrapper = styled.div`
       width: 100%;
       padding: 2em 0;
       padding-left: 110px;
+      margin-bottom: 100px;
       /* padding-left: 24px;
       margin-left: 24px;
       padding: 2rem 0;
