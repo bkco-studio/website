@@ -61,7 +61,6 @@ const CaseStudiesWrapper = styled.div`
       img {
         max-width: 100%;
         border-radius: 5px;
-        border: 1px solid green;
         margin-bottom: 0;
       }
     }
@@ -86,6 +85,7 @@ const CaseStudiesWrapper = styled.div`
       font-family: "Noto Serif SC", serif;
     }
     .work-title, .project-description {
+      padding-left: 8px;
     }
     
   }
