@@ -81,11 +81,14 @@ const TestimonialWrapper = styled.div`
   margin-top: 34px;
 
   .testimonial-wrapper {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     max-width: 100%;
     width: 600px;
     padding-bottom: 0.5rem;
   }
+  /* .testimonial-wrapper:first-of-type {
+    margin-top: 50px;
+  } */
   .testimony-avatar {
     height: 62px;
     width: 62px;
@@ -118,7 +121,7 @@ const TestimonialWrapper = styled.div`
   .testimony-header {
     background-color: #f8f8f8;
     padding: 2em 24px;
-    margin-bottom: 1em;
+    margin-bottom: 42px;
   }
   .testimonial-header-text {
     padding-left: 24px;
