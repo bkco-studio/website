@@ -76,6 +76,7 @@ const CaseStudiesWrapper = styled.div`
       color: inherit;
       /* font-size: 1.5rem; */
       font-size: 18px;
+      font-weight: bold;
       text-decoration: none;
       cursor: pointer;
     }
