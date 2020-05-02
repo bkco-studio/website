@@ -123,7 +123,8 @@ const FormWrapper = styled.div`
     margin-bottom: 1rem;
   }
   input,
-  textarea {
+  textarea,
+  select {
     background-color: #f8f8f8;
   }
   .submit-container {
@@ -161,9 +162,11 @@ const FormWrapper = styled.div`
     }
     margin-right: 2rem;
   }
+  .header-text {
+    margin-top: 22px;
+  }
 
   @media (max-width: 768px) {
-    display: hidden;
     padding: 2em 1em;
     max-width: 100%;
     .formgrid {
@@ -172,7 +175,8 @@ const FormWrapper = styled.div`
       grid-column-gap: 1rem;
     }
     .input-box {
-      min-width: 100%;
+      width: 300px;
+      margin-bottom: 0;
     }
   }
 `

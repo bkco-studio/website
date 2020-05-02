@@ -50,7 +50,7 @@ const FooterWrapper = styled.div`
   font-size: 1.1rem;
   background-color: ${styles.colors.mainWhite};
   border-radius: 5px;
-  height: 374px;
+  /* height: 374px; */
   padding: 37px 2em;
   color: ${styles.colors.mainBlack};
   font-family: "Noto Serif SC", serif;
@@ -119,9 +119,9 @@ const FooterWrapper = styled.div`
     font-size: 1.5em;
   }
   @media (max-width: 768px) {
+    padding-top: 20px;
     a {
-      /* font-size: 12px; */
-      margin-bottom: 7px;
+      margin-bottom: 3px;
     }
     display: grid;
     grid-template-columns: 1fr;
@@ -137,6 +137,7 @@ const FooterWrapper = styled.div`
 
     .footer-column-header {
       margin-top: 12px;
+      margin-bottom: 7px;
     }
   }
 `
