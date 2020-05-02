@@ -98,7 +98,7 @@ const TestimonialWrapper = styled.div`
     text-transform: uppercase;
   }
   .testimony-name {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.2em;
     font-weight: bold;
   }
   .testimony-title {
