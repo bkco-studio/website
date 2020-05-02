@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Section, Heading, Text } from "../../utils"
+import { Heading, Text } from "../../utils"
 import styled from "styled-components"
 import Pic1 from "../../images/testimonyGallery/62X62-1.png"
 import Pic2 from "../../images/testimonyGallery/62X62-2.png"
@@ -39,7 +39,6 @@ export default class Testimonials extends Component {
   }
   render() {
     return (
-      // <Section>
       <TestimonialWrapper>
         <div className="testimony-header">
           <div className="testimony-header-text">
@@ -47,7 +46,6 @@ export default class Testimonials extends Component {
             <Text text="The partnerships with our clients are our number one priority. We value honest and open communication becauses it leads to a better end result. Here are some nice things some past clients have said about working with us:" />
           </div>
         </div>
-        {/* <Section> */}
         {this.state.testimonials.map(testimonial => {
           return (
             <div className="testimonial-wrapper" key={testimonial.id}>
@@ -58,8 +56,6 @@ export default class Testimonials extends Component {
                 </div>
               </blockquote>
               <div className="testimonial-detail">
-                {/* <Img fluid={GET_IMAGE.img1.childImageSharp.fluid} /> */}
-                {/* <div className="testimony-avatar"></div> */}
                 <img className="testimony-avatar" src={testimonial.img} />
 
                 <div>
@@ -70,9 +66,7 @@ export default class Testimonials extends Component {
             </div>
           )
         })}
-        {/* </Section> */}
       </TestimonialWrapper>
-      // </Section>
     )
   }
 }
@@ -107,8 +101,6 @@ const TestimonialWrapper = styled.div`
   .testimonial-text {
     line-height: 1.67;
     margin-bottom: 1em;
-    /* display: grid; */
-    /* display: none; */
     margin-bottom: 34px;
     position: relative;
     font-family: "Noto Serif SC", serif;
